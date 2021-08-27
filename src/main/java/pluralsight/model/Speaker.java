@@ -1,4 +1,4 @@
-package model;
+package pluralsight.model;
 
 public class Speaker {
 

@@ -1,22 +1,21 @@
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import respository.HibernateSpeakerRepositoryImpl;
-import respository.SpeakerRepository;
-import service.SpeakerService;
-import service.SpeakerServiceImpl;
 
 @Configuration
+@ComponentScan({"pluralsight"})
 public class AppConfig {
 
-    @Bean(name = "speakerService")
-    public SpeakerService getSpeakerService(){
-        SpeakerServiceImpl service = new SpeakerServiceImpl(getSpeakerRepository());
-        //service.setRepository(getSpeakerRepository());
-        return service;
-    }
+//    @Bean(name = "speakerService")
+//    @Scope(value = BeanDefinition.SCOPE_SINGLETON)
+//    public SpeakerService getSpeakerService(){
+//        //SpeakerServiceImpl pluralsight.service = new SpeakerServiceImpl(getSpeakerRepository());
+//        SpeakerServiceImpl pluralsight.service = new SpeakerServiceImpl();
+//        //pluralsight.service.setRepository(getSpeakerRepository());
+//        return pluralsight.service;
+//    }
 
-    @Bean(name = "speakerRepository")
-    public SpeakerRepository getSpeakerRepository(){
-        return new HibernateSpeakerRepositoryImpl();
-    }
+//    @Bean(name = "speakerRepository")
+//    public SpeakerRepository getSpeakerRepository(){
+//        return new HibernateSpeakerRepositoryImpl();
+//    }
 }

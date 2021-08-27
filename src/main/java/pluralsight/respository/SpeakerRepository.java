@@ -1,6 +1,6 @@
-package respository;
+package pluralsight.respository;
 
-import model.Speaker;
+import pluralsight.model.Speaker;
 
 import java.util.List;
 
