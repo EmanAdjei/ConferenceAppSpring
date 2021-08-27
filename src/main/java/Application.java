@@ -7,10 +7,10 @@ public class Application {
 
     public static void main(String[] args) {
 
-        ApplicationContext appCotext = new AnnotationConfigApplicationContext(AppConfig.class);
+        ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
         //SpeakerService service = new SpeakerServiceImpl();
 
-        SpeakerService service = appCotext.getBean("speakerService", SpeakerService.class);
+        SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
 
         System.out.println(service.findAll().get(0).getFirstname());
         System.out.println(service.findAll().get(0).getLastName());
