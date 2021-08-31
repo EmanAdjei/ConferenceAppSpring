@@ -14,6 +14,9 @@ public class Application {
         System.out.println(service.findAll().get(0).getFirstname());
         System.out.println(service.findAll().get(0).getLastName());
 
+        //Seeded value passed into application using expression language
+        System.out.println(service.findAll().get(0).getSeedNum());
+
         System.out.println(service);
 
         //Prove it is Singleton or Prototype based on scope
